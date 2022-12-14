@@ -1,0 +1,19 @@
+header {
+    background-color: rgb(196, 13, 13);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 18px;
+}
+
+.id {
+    background-color: rgb(15, 83, 209);
+    color: white;
+}
+
+.col {
+    margin: 15px;
+}

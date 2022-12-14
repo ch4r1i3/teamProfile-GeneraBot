@@ -1,26 +1,32 @@
-class Employee {
-    constructor(name, id, email) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.title = "Employee";
-    }
+const { expect } = require('@jest/globals');
+const Employee = require('../lib/Employee');
 
-    getName() {
-        return this.name;
-    }
+test('creates an Employee object', () => {
+    const employee = new Employee();
 
-    getId() {
-        return this.id;
-    }
+    expect(typeof(employee)).toBe("object");
+});
 
-    getEmail() {
-        return this.email;
-    } 
+test("gets employee's name", () => {
+    const employee = new Employee('Employee#1');
 
-    getRole() {
-        return this.title;
-    }   
-}
+    expect(employee.getName()).toBe('Employee#1');
+});
 
-module.exports = Employee;
+test("gets employee's id", () => {
+    const employee = new Employee('Employee#1', '1');
+
+    expect(employee.getId()).toBe('1');
+});
+
+test("get employee's email", () => {
+    const employee = new Employee('Employee#1', '1', 'aperson@email.fr');
+
+    expect(employee.getEmail()).toBe('aperson@email.fr');
+});
+
+test("getRole() returns Employee", () => {
+    const employee = new Employee('Employee');
+
+    expect(employee.getRole()).toBe('Employee');
+});

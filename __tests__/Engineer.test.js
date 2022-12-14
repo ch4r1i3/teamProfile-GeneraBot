@@ -1,19 +1,21 @@
-const Employee = require("./Employee");
+const Engineer = require('../lib/Engineer');
+const Employee = require('../lib/Employee');
+const { test } = require('@jest/globals');
 
-class Engineer extends Employee {
-    constructor(name, id, email, github) {
-        super(name, id, email);
-        this.github = github;
-        this.title = 'Engineer';
-    }
-    
-    getGithub() {
-        return this.github;
-    }
+test('creates an engineer object', () => {
+    const engineer = new Engineer('Engineer#1');
 
-    getRole() {
-        return 'Engineer';
-    }
-}
+    expect(typeof(engineer)).toBe('object');
+});
 
-module.exports = Engineer;
+test('gets github username', () => {
+    const engineer = new Engineer('Manager', '1', 'carlos@email.fr', 'Carlosgithub');
+
+    expect(engineer.github).toBe('Carlosgithub');
+});
+
+test('getRole() returns Engineer', () => {
+    const engineer = new Engineer('Manager#1');
+
+    expect(engineer.getRole()).toBe('Engineer');
+});
