@@ -15,17 +15,18 @@ This project is a team profile generator using Nodejs, OOP and TDD (Jest). The u
 
 Project has been created using:
 
-HTML
-CSS
-JavaScript
-Nodejs
-Inquirerjs
+1.) HTML
+2.) CSS
+3.) JavaScript
+4.) Node.js
+5.) Inquirer.js
 
 # Tutorial
-https://watch.screencastify.com/v/ZO0DRruKriAXONbcXQim
+https://drive.google.com/file/d/1Toc8N-Mh2XbxaglENRvutwBOVjvtUniL/view
 
 # Mock-Up
-Screenshot 2022-12-15 at 8.31.56 PM.jpeg
+![Screenshot 2022-12-15 at 8 31 56 PM](https://user-images.githubusercontent.com/111701536/208002367-0ec06f84-4d5a-4839-9c34-11e7716869b3.jpeg)
+
 
 # URL to GitHub Repo
 https://github.com/ch4r1i3/teamProfile-GeneraBot.git
